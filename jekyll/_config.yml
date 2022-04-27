@@ -8,6 +8,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+destination: ../docs
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
@@ -27,12 +29,13 @@ github_username:  creativecommons
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-datapage-generator
   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-exclude:
+#exclude:
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
@@ -42,25 +45,28 @@ exclude:
 #   - vendor/ruby/
 
 page_gen-dirs: true # uncomment, if you prefer to generate named folders
-
 page_gen:
-  - data: 'countries'
-    template: 'country'
-    name: 'country'
-    dir: 'country'
-  - data: 'legislation'
-    template: 'legislation'
-    name: 'title'
-    dir: 'country/#{sanitize_filename(data["country"])}/legislation'
-  - data: 'bills'
-    template: 'bill'
-    name: 'title'
-    dir: 'country/#{sanitize_filename(data["country"])}/bill'
-  - data: 'decisions'
-    template: 'decision'
-    name: 'case'
-    dir: 'country/#{sanitize_filename(data["country"])}/decision'
-  - data: 'resources'
-    template: 'resource'
-    name: 'title'
-    dir: 'country/#{sanitize_filename(data["country"])}/resource'
+  - data: "countries"
+    template: "country"
+    name: "country"
+    dir: "country"
+  - data: "legislation"
+    template: "legislation"
+    title: "title"
+    dir: "country"
+    name_expr: "data['country'] + '_legislation_' + data['title']"
+  - data: "bills"
+    template: "bill"
+    title: "title"
+    dir: "country"
+    name_expr: "data['country'] + '_bill_' + data['title']"
+  - data: "decisions"
+    template: "decision"
+    title: "case"
+    dir: "country"
+    name_expr: "data['country'] + '_decision_' + data['case']"
+  - data: "resources"
+    template: "resource"
+    title: "title"
+    dir: "country"
+    name_expr: "data['country'] + '_resource_' + data['title']"
