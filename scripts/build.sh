@@ -5,12 +5,8 @@
 
 RRDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
-pushd "${RRDIR}"
-git pull
-pushd jekyll
-/usr/local/bin/bundle exec jekyll build \
-                      --config _config.yml,_config-publish.yml
-sudo -u www-data mkdir -p /var/www/reversionary-rights
-sudo -u www-data cp -r _site/* /var/www/reversionary-rights/
-popd
-popd
+pushd "${RRDIR}" >/dev/null
+pushd jekyll >/dev/null
+bundle exec jekyll build
+popd >/dev/null
+popd >/dev/null

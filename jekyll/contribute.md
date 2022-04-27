@@ -37,3 +37,11 @@ Other Resources
 For information regarding any other reversionary rights resources such as web sites, articles, etc.
 
 [Google Form for other resource information](https://docs.google.com/forms/d/e/1FAIpQLSd1-ZnxC_YfAo8awSv2u276zppMwXcRFvBurvY0d373Yf6GBA/viewform?usp=sf_link)
+
+
+Code
+====
+
+To help develope this website (CSS, HTML, Jekyll):
+
+[creativecommons/reversionary-rights](https://github.com/creativecommons/reversionary-rights)
