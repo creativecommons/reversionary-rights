@@ -15,7 +15,7 @@ exclude: true
   <tbody>
     {% for legislation in site.data.legislation %}
       {% if legislation.country == page.country %}
-        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}/legislation/{{ legislation.title | sanitize_filename }}">{{legislation.title}}</a></td><td>{{ legislation.number }}</td></tr>
+        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}_legislation_{{ legislation.title | sanitize_filename }}/">{{legislation.title}}</a></td><td>{{ legislation.number }}</td></tr>
       {% endif %}
     {% endfor %}
   </tbody>
@@ -30,7 +30,7 @@ exclude: true
   <tbody>
     {% for bill in site.data.bills %}
       {% if bill.country == page.country %}
-        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}/bill/{{ bill.title | sanitize_filename }}">{{bill.title}}</a></td><td>{{ bill.number }}</td></tr>
+        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}_bill_{{ bill.title | sanitize_filename }}/">{{bill.title}}</a></td><td>{{ bill.number }}</td></tr>
       {% endif %}
     {% endfor %}
   </tbody>
@@ -45,7 +45,7 @@ exclude: true
   <tbody>
     {% for decision in site.data.decisions %}
       {% if decision.country == page.country %}
-        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}/decision/{{ decision.case | sanitize_filename }}">{{decision.case}}</a></td><td>{{ decision.number }}</td></tr>
+        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}_decision_{{ decision.case | sanitize_filename }}/">{{decision.case}}</a></td><td>{{ decision.number }}</td></tr>
       {% endif %}
     {% endfor %}
   </tbody>
@@ -59,7 +59,7 @@ exclude: true
   <tbody>
     {% for resource in site.data.resources %}
       {% if resource.country == page.country %}
-        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}/resource/{{ resource.title | sanitize_filename }}">{{resource.title}}</a></td></tr>
+        <tr><td><a href="{{page.title | sanitize_filename | prepend: "/country/" | relative_url}}_resource_{{ resource.title | sanitize_filename }}/">{{resource.title}}</a></td></tr>
       {% endif %}
     {% endfor %}
   </tbody>
