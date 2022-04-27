@@ -20,11 +20,6 @@
 
 /* End From. */
 
-.site-title:after {
-    color: lightgrey;
-    content: " [BETA]";
-}
-
 .banner-image {
     border: lightblue solid 1px;
 }
