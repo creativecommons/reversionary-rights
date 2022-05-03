@@ -13,8 +13,8 @@ International reversionary rights resources website: [CC Rights Back Resource
 > behavior to [conduct@creativecommons.org](mailto:conduct@creativecommons.org)
 > per our [reporting guidelines][reporting_guide].
 
-[code_of_conduct]:https://creativecommons.github.io/community/code-of-conduct/
-[reporting_guide]:https://creativecommons.github.io/community/code-of-conduct/enforcement/
+[code_of_conduct]: https://opensource.creativecommons.org/community/code-of-conduct/
+[reporting_guide]: https://opensource.creativecommons.org/community/code-of-conduct/enforcement/
 
 
 ## Contributing
