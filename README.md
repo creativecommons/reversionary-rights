@@ -126,7 +126,7 @@ Optional text to be included in the country page.
 
 [![CC BY-SA 4.0 license button][cc-by-sa-png]][cc-by-sa]
 
-The content and data are licensedunder a [Creative Commons
+The content and data are licensed under a [Creative Commons
 Attribution-ShareAlike 4.0 International License][cc-by-sa].
 
 [cc-by-sa-png]: https://licensebuttons.net/l/by-sa/4.0/88x31.png#floatleft "CC BY-SA 4.0 license button"
