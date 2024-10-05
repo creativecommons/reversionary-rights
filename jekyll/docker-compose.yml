@@ -1,0 +1,23 @@
+version: '3'
+services:
+  jekyll:
+    image: my-jekyll-app:latest
+      #    command: jekyll serve --watch --host 0.0.0.0
+      #volumes:
+      # - .:/srv/jekyll
+    ports:
+      - "4000:4000"
+    environment:
+      - RAILS_ENV=development      
+  node:
+    image: node:latest  # Use an appropriate Node.js image
+    volumes:
+      - ../:/usr/src/app  # Mount your project directory
+    working_dir: /usr/src/app
+    # command: prettier --write docs/index.html  # Adjust the file types as needed
+
+    # Add an initialization step to install Prettier before running
+    # entrypoint: /bin/sh -c "npm install --global prettier && prettier --write docs/index.html"
+
+    #multiple files
+    entrypoint: /bin/sh -c "npm install --global prettier && prettier --write 'docs/**/*.html'"
