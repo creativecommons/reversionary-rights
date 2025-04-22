@@ -35,3 +35,8 @@
    top: 0; bottom: 0; left: 0; right: 0;
 
 }
+
+.site-title {
+    max-width: 80%;
+    line-height: 45px;
+}

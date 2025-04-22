@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  jekyll:
+    build: .
+    volumes:
+      - .:/usr/src/app  # Bind mount the current directory to /usr/src/app in the container
+    ports:
+      - "4000:4000"     # Map port 4000 of the container to your local machine
+    command: bundle exec jekyll serve --host 0.0.0.0 --watch
